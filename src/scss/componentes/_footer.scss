@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+
+    background-color: v.$indigo;
+
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    a{
+        color: white;
+        transition: all 0.5s ease;
+        margin-right: 2rem;
+        &:hover{
+            color: rgb(234, 234, 67);
+            background-color: darken(v.$indigo, 20%);
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.borrar,
+.pendiente,
+.terminada {
+
+    background-color: rgb(235, 71, 71);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 3px;
+
+}
+
+
+#agregar-tarea {
+    min-width: 60%;
+    margin: 0 auto;
+}
+
+.botones-tarea {
+
+    display: block;
+@include m.tablet {
+    display: flex;
+    gap: 1rem;
+
+}
+}
+
+
+.terminada {
+    background-color: rgb(25, 137, 19);
+}
+
+.pendiente{
+    background-color: rgb(220, 147, 0);
+}

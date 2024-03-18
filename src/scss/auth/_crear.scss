@@ -1,0 +1,28 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.crear {
+    margin-top: 5rem;
+    .uptask {
+
+        @include m.degrade(rgb(118, 2, 219) , rgb(253, 94, 45) );
+     
+    }
+
+    .descripcion-pagina{
+
+        color : rgb(118, 2, 219);
+    }
+
+    span{
+        color: rgb(118, 2, 219);
+    }
+
+    input[type="submit"]{
+        background-color: rgb(118, 2, 219);
+
+        &:hover{
+            background-color: rgb(245, 74, 21);
+        }
+    }
+}

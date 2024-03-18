@@ -1,0 +1,97 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sidebar {
+
+    background-color: v.$indigo;
+    text-align: center;
+    padding: 3rem;
+
+    h2 {
+        color: v.$blanco;
+        margin: 0;
+
+
+        @include m.tablet {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .iconos-menu {
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        @include m.tablet{
+            display: block;
+        }
+
+
+    }
+
+    .ocultar {
+
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+
+    .icon {
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        margin: 0;
+
+        @include m.tablet {
+
+            display: none;
+
+        }
+    }
+
+    .luna{
+        
+       
+        filter: saturate(0);
+        filter:brightness(100);
+        transition: filter 0.5s ease;
+
+        &:hover{
+            cursor: pointer;
+            filter: none;
+        }
+    }
+
+    .navegacion {
+        transition: all 1s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+
+
+        @include m.tablet {
+
+            opacity: 1;
+            height: auto;
+        }
+
+        a {
+            color: white;
+            transition: padding 0.5s ease;
+
+            &:hover,
+            &.activo {
+                color: rgb(234, 234, 67);
+                background-color: darken(v.$indigo, 20%);
+                padding: 1rem;
+                border-radius: 5px;
+            }
+        }
+
+    }
+}

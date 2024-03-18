@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.olvide {
+    margin-top: 5rem;
+    .uptask{
+        @include m.degrade(rgb(13, 157, 0) , rgba(112, 20, 20, 0.988))
+    }
+    .descripcion-pagina{
+        color: rgb(13, 157, 0)
+    }
+    span{
+        color:rgb(13, 157, 0);
+    }
+
+    input[type="submit"]{
+        background-color:rgb(13, 157, 0);
+
+            &:hover{
+
+                background-color: rgba(112, 20, 20, 0.988);
+            }
+    }
+   
+}
+
+.formulario{
+
+        p{
+            font-size: 1.3rem;
+        }
+ 
+}

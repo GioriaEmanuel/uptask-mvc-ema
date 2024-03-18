@@ -1,0 +1,31 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.listado-proyecto{
+    
+    list-style: none;
+    padding: 2rem 0;
+    background-color: white;
+    border-radius: 10px;
+    text-align: start;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+
+
+    .proyecto{
+
+        margin: 5rem 2rem ;
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: capitalize;
+        transition: all 0.5s ease;
+         
+         &:hover{
+            background-color:rgb(204, 202, 202);
+            padding: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+
+         }
+
+    }
+}

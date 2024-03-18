@@ -1,0 +1,135 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+    font-family: v.$fuente_textos;
+    font-size: 1.6rem;
+    min-height: 100%;
+    background-color: rgb(245, 245, 245);
+
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor-sm {
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.dark-mode {
+    background-color: rgb(22, 22, 22);
+
+    .contenedor-sm{
+
+        .formulario{
+            background-color: black;
+                input{
+                    background-color: rgb(173, 173, 173);
+                    color: black;
+                }
+        }
+    }
+    .tasks {
+        background-color: rgb(22, 22, 22);
+
+        h2{
+            color: white;
+        }
+
+        .sidebar {
+
+            background-color: black;
+
+            a:hover {
+                color: v.$indigo;
+                background-color: white;
+            }
+
+            .activo {
+                background-color: white;
+                color: v.$indigo;
+
+            }
+
+            .luna{
+
+                filter: none;
+                transition: filter 0.5s ease;
+        
+                &:hover{
+                    cursor: pointer;
+                    filter: saturate(0);
+                    filter:brightness(100);
+                }
+            }
+
+        }
+        .contenido-header{
+            background-color: black;
+            .titulo-header{
+                @include m.degrade(rgb(226, 204, 65),rgb(171, 10, 10));
+                margin:0;
+                font-size: 2rem;
+                @include m.tablet{
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .formulario,.modal{
+            background-color: black;
+
+            label{
+                color: #ffffffde;
+            }
+            input{
+                background-color: rgb(207, 207, 207);
+            }
+            .boton-perfil,.boton-crear{
+                background: linear-gradient(0deg, rgb(157, 19, 19)  0%, rgb(170, 170, 28) 100%);
+            }
+        }
+       
+    
+        .tareas{
+            background-color: black;
+                p{
+                    color: white;
+                }
+                
+        }
+        
+      
+
+    }
+
+    .footer {
+
+        background-color: black;
+    }
+
+}

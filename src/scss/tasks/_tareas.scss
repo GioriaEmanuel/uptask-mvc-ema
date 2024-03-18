@@ -1,0 +1,121 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.contenedor-tareas {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    gap: 3rem;
+
+    .agregar-tarea {
+
+        @include m.boton(v.$indigo, v.$blanco);
+
+    }
+
+}
+
+.tareas {
+
+    background-color: white;
+    border-radius: 5px;
+    padding: 2rem;
+
+
+    .tarea {
+
+        display: block;
+        border: 1px solid gray;
+        padding-bottom: 1rem;
+        font-weight: bold;
+
+        @include m.tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: none;
+
+        }
+
+        p{
+            cursor: pointer;
+        }
+
+
+    }
+
+    
+
+}
+
+
+.contenedor-modal {
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.315);
+    backdrop-filter: blur(2px);
+    
+
+    .modal {
+        position: relative;
+        top: 0rem;
+        left: 15%;
+        opacity: 0.2;
+        transition: all 0.6s ease-in;
+        background-color: white;
+        width: 80%;
+        padding: 3rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &.mostrar {
+
+            opacity: 1;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        input {
+            width: 90%;
+            padding: 1rem;
+            margin-right: 1rem;
+            border: none;
+            border-bottom: 1px solid gray;
+
+        }
+
+        .modal-botones {
+
+            display: flex;
+            gap: 3rem;
+
+            button {
+
+                @include m.boton(v.$indigo, v.$blanco);
+                border-radius: 10px;
+            }
+        }
+
+
+
+
+    }
+
+
+
+
+
+}

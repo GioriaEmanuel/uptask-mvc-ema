@@ -1,0 +1,23 @@
+
+@use 'base/variables' as v;
+
+.alertas {
+
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    
+}
+.error{
+    background-color: rgb(219, 89, 89);
+    background: linear-gradient(0deg, rgb(219, 89, 89) 0%, rgb(216, 22, 22) 100%);
+}
+.exito{
+    background-color: rgb(89, 197, 47);
+    background: linear-gradient(0deg, rgb(89, 197, 47) 0%, rgb(1, 35, 2) 100%);
+
+   
+}

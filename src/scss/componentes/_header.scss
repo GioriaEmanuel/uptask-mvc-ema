@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.contenido-header{
+
+  background-color: rgba(255, 255, 255, 0.671);
+  margin: 1rem;
+  border-radius: 8px;
+  align-items: center;
+  padding: 2rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+   .titulo-header{
+        @include m.degrade(rgb(154, 65, 226),rgb(3, 156, 92));
+        margin:0;
+        font-size: 2rem;
+        @include m.tablet{
+            font-size: 3rem;
+        }
+        
+        
+   }
+   
+}
+

@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.mensaje {
+    margin-top: 5rem;
+    .uptask {
+
+        @include m.degrade(rgb(232, 8, 8) , rgb(243, 253, 45) );
+     
+
+    }
+    .contenido-mensaje{
+
+        text-align: center;
+        background-color: white;
+        padding: 3rem;
+        border-radius: 10px;
+        -webkit-box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.54);
+        -moz-box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.54);
+        box-shadow: 7px 6px 5px 0px rgba(0, 0, 0, 0.54);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2.2rem;
+
+        background: rgb(232, 8, 8);
+        background: linear-gradient(0deg, rgb(232, 8, 8) 0%,  rgb(243, 253, 45) 100%);
+        color: transparent;
+        background-clip: text;
+      
+      
+
+    }
+
+    a{
+        color: rgb(161, 145, 23);
+    }
+}

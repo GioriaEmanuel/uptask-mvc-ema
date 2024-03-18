@@ -1,0 +1,40 @@
+@use 'variables' as v;
+
+h1, h2, h3 {
+    font-family: v.$fuente_headings;
+    margin: 0 0 calc(v.$separacion / 2) 0 ;
+    font-weight: 900;
+}
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 5rem;
+}
+h3 {
+    font-size: 4rem;
+}
+p {
+    font-size: 2rem;
+    color: v.$gris;
+    line-height: 1.8;
+}
+
+.descripcion-pagina{
+
+    text-align: center;
+    margin: 2rem auto;
+    color: v.$cyan;
+    font-weight: bold;
+    font-size: 2.3rem;
+
+}
+
+.tagline{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-family: v.$fuente_headings;
+    font-weight: bold;
+    font-size: 2.5rem;
+    
+}

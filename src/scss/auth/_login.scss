@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.login {
+    margin-top: 5rem;
+    .uptask {
+
+        @include m.degrade(v.$cyan , rgba(253,187,45,1) );
+     
+
+    }
+    .descripcion-pagina{
+
+        color : rgb(33, 151, 202);
+    }
+
+    span{
+        color: rgb(33, 151, 202);
+    }
+
+    input[type="submit"]{
+        background-color:v.$cyan;
+
+            &:hover{
+
+                background-color: rgb(163, 117, 16);
+            }
+    }
+}

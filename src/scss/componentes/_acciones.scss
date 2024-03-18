@@ -1,0 +1,27 @@
+@use 'base/mixins' as m;
+
+
+.acciones{
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+   
+    @include m.tablet{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+   
+
+    a{
+        color: gray;
+        font-weight: bold;
+        transition: all 0.5s ease;
+        margin-bottom: 4rem;
+    }
+}
+
+a:hover{
+    color:black;
+}
