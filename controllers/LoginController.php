@@ -29,9 +29,7 @@ class LoginController
                 if (!$usuario || $usuario->token) {
 
                     $auth->setAlerta('error', 'El usuario no existe o no ha sido confirmado');
-                } else {
-
-                    ;
+                } else {;
 
                     if ($usuario->comprobarPassword($auth->password)) {
 
@@ -62,6 +60,16 @@ class LoginController
         $_SESSION = [];
 
         header('Location: /');
+    }
+    public static function invitado(Router $router)
+    {
+        session_start();
+
+        $_SESSION['login'] = true;
+        $_SESSION['nombre'] = 'invitado';
+        $_SESSION['id'] = '20';
+        $_SESSION['email'] = 'invitado@invitado.com';
+        header('Location: /tasks');
     }
     public static function crear(Router $router)
     {

@@ -19,7 +19,7 @@ class TasksController
         
             if(empty($proyectos)){
 
-            Proyecto::setAlerta('error','No tienes Proyectos Maraca');
+            Proyecto::setAlerta('error','No tienes proyectos aun');
             } 
         
         $alertas = Proyecto::getAlertas();

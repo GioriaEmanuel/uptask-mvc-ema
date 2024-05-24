@@ -27,6 +27,8 @@ $router->post('/nuevopassword',[LoginController::class, 'nuevopassword']);
 
 $router->get('/logout',[LoginController::class, 'logout']);
 
+$router->get('/invitado',[LoginController::class,'invitado']);
+
 //RUTAS PRIVADAS
 
 //Dashboard

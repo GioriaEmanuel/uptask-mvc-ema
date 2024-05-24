@@ -22,6 +22,8 @@
                 <input type="password" name="password" id="password" placeholder="Ingresa tu Password">
             </div>
             <input type="submit" class="boton" value="Iniciar Sesion">
+
+            <a href="/invitado">Ingresar como invitado</a>
         </form>
 
         <div class="acciones">

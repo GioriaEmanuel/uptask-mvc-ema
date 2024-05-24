@@ -5,7 +5,7 @@
 
 .formulario {
 
-    background-color: white;
+    background-color: v.$blanco;
     display: flex;
     flex-direction: column;
     gap:3rem;
@@ -41,7 +41,7 @@
     }
     .boton {
         align-self: center;
-        @include m.boton(v.$cyan , v.$blanco)
+        @include m.boton(v.$indigo , v.$blanco)
     }
     .boton-crear {
         align-self: center;

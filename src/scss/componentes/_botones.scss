@@ -6,7 +6,7 @@
 .pendiente,
 .terminada {
 
-    background-color: rgb(235, 71, 71);
+    background-color: v.$rojo;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -14,6 +14,7 @@
     border: none;
     padding: 0.5rem;
     border-radius: 3px;
+    margin: 0 1rem;
 
 }
 
@@ -35,9 +36,9 @@
 
 
 .terminada {
-    background-color: rgb(25, 137, 19);
+    background-color: v.$verde;
 }
 
 .pendiente{
-    background-color: rgb(220, 147, 0);
+    background-color: v.$naranja;
 }
